@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/scorpii-logo.png" alt="Scorpii Studio Logo" width="230" style="filter: drop-shadow(0 10px 28px rgba(255, 65, 85, 0.45));" />
+<img src="assets/scorpii-logo.png" alt="Scorpii Studio Logo" width="240" />
 
 # SCORPII STUDIO
 ### *CREATE WITHOUT LIMITS.*
