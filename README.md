@@ -83,7 +83,6 @@ cargo run -p concat-cli -- serve --port 7420
 ## 🏛️ Project Governance & Architecture
 
 * **[PRODUCT_BRIEF.md](PRODUCT_BRIEF.md)** — Product roadmap, creator use cases, and MVP milestones.
-* **[AGENTS.md](AGENTS.md)** — Core engineering directives, git invariants, and integration rules.
 * **[ARCHITECTURE_DECISIONS.md](ARCHITECTURE_DECISIONS.md)** — Architectural decision records (ADRs) and dependency topology.
 * **[UPSTREAM_PATCHES.md](UPSTREAM_PATCHES.md)** — Ledger of all local modifications to maintain clean upstream sync.
 * **[TEST_PLAN.md](TEST_PLAN.md)** — Comprehensive quality gates and media integrity validation.
