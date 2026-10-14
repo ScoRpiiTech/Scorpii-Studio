@@ -41,6 +41,7 @@ pub mod session;
 pub mod templates;
 pub mod titles;
 pub mod updates;
+pub mod voicestudio;
 
 pub use brush::{Brushes, RegionRequest};
 pub use cutout::{AnalyseRequest, Cutouts};
@@ -51,6 +52,7 @@ pub use projects::ProjectInfo;
 pub use reverse::{ReverseRequest, Reversers};
 pub use session::{EditorView, Session, SettingsView};
 pub use titles::{TitleClip, Titles};
+pub use voicestudio::{VoiceStudioGenerateRequest, VoiceStudioManager, DEFAULT_VOICESTUDIO_URL};
 
 /// The one scheduler every decode for the screen goes through: the
 /// monitor's frames and the frames ahead of the playhead first, then
