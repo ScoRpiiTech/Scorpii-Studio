@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/scorpii-logo.png" alt="Scorpii Studio Logo" width="220" style="border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 200, 255, 0.2);" />
+<img src="assets/scorpii-logo.png" alt="Scorpii Studio Logo" width="240" style="border-radius: 28px; box-shadow: 0 12px 36px rgba(255, 65, 85, 0.35);" />
 
 # SCORPII STUDIO
 ### *CREATE WITHOUT LIMITS.*
