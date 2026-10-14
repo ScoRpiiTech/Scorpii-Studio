@@ -1,138 +1,97 @@
 <div align="center">
-<table width="100%">
-  <tr>
-    <td align="left" width="120">
-      <img src="https://cdn.jsdelivr.net/gh/jub0t/Concat@main/assets/concat-mark-dark.png" alt="Concat" width="100" />
-    </td>
-    <td align="">
-      <h1>Concat</h1>
-      <h3 style="margin-top: -10px;">The truly free, and open-source cross-platform CapCut replacement.</h3>
-    </td>
-  </tr>
-</table>
 
-<img src="https://cdn.jsdelivr.net/gh/jub0t/Concat@main/assets/editor.png" alt="Concat editor" width="100%" />
+<img src="assets/scorpii-logo.png" alt="Scorpii Studio Logo" width="220" style="border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 200, 255, 0.2);" />
+
+# SCORPII STUDIO
+### *CREATE WITHOUT LIMITS.*
+
+[![Version](https://img.shields.io/badge/Version-0.2.7-00c8ff?style=flat-square&logo=semver&logoColor=white)](https://github.com/ScoRpiiTech/Scorpii-Studio)
+[![Rust](https://img.shields.io/badge/Rust-1.93.1-orange?style=flat-square&logo=rust&logoColor=white)](https://www.rust-lang.org/)
+[![GPU](https://img.shields.io/badge/GPU-DirectX12%20%7C%20Vulkan%20%7C%20Metal-blueviolet?style=flat-square)](https://wgpu.rs/)
+[![Local First](https://img.shields.io/badge/Privacy-100%25%20Local--First-00E599?style=flat-square&logo=shield&logoColor=white)](PRODUCT_BRIEF.md)
+[![License](https://img.shields.io/badge/License-AGPL%20v3-0568FD?style=flat-square&logo=gnu&logoColor=white)](LICENSE)
 
 <p align="center">
-  <a href="https://github.com/jub0t/Concat/releases"><img src="https://img.shields.io/github/downloads/jub0t/concat/total?style=flat-square&logo=github&logoColor=F8F8F8&label=Downloads&labelColor=212123&color=0568FD" alt="Total Downloads" /></a>
-  <a href="https://github.com/jub0t/Concat/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/jub0t/Concat/ci.yml?style=flat&logo=githubactions&logoColor=F8F8F8&label=Build&labelColor=000000" alt="Build Status" /></a>
-  <a href="https://github.com/jub0t/Concat/releases"><img src="https://img.shields.io/badge/Version-0.2.7-0568FD?style=flat-square&logo=semver&logoColor=F8F8F8&labelColor=212123" alt="Concat Version 0.2.5" /></a>
-  <a href="https://discord.gg/DVuPfpXfqP"><img src="https://img.shields.io/badge/Discord-Join%20the%20server-5865F2?style=flat&logo=discord&logoColor=F8F8F8&labelColor=000000" alt="Join Concat Discord" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL%20v3-0568FD?style=flat-square&logo=gnu&logoColor=F8F8F8&labelColor=212123" alt="License: AGPL-3.0-or-later" /></a>
-  <a href="https://concatenate.pages.dev/#sponsor"><img src="https://img.shields.io/badge/Sponsor-Concat-0568FD?style=flat-square&labelColor=212123" alt="Sponsor Concat" /></a>
+  <b>A next-generation, local-first desktop video creation suite engineered for creators, speed, and privacy.</b><br>
+  No watermarks. No subscriptions. No cloud locks. Your media stays on your disk.
 </p>
-
-<p align="center">
-  <a href="https://concatenate.pages.dev/#download"><img src="https://cdn.jsdelivr.net/gh/jub0t/Concat@main/assets/download_button.svg" alt="Download Concat" width="220" /></a>
-</p>
-
-**🇬🇧 English** · [🇩🇪 Deutsch](docs/README.de.md) · [🇪🇸 Español](docs/README.es.md) · [🇫🇷 Français](docs/README.fr.md) · [🇮🇹 Italiano](docs/README.it.md) · [🇳🇱 Nederlands](docs/README.nl.md) · [🇵🇱 Polski](docs/README.pl.md) · [🇧🇷 Português (Brasil)](docs/README.pt-BR.md) · [🇷🇺 Русский](docs/README.ru.md) · [🇺🇦 Українська](docs/README.uk.md) · [🇹🇷 Türkçe](docs/README.tr.md) · [🇭🇷 Hrvatski](docs/README.hr.md) · [🇮🇩 Bahasa Indonesia](docs/README.id.md) · [🇻🇳 Tiếng Việt](docs/README.vi.md) · [🇹🇭 ไทย](docs/README.th.md) · [🇯🇵 日本語](docs/README.ja.md) · [🇰🇷 한국어](docs/README.ko.md) · [🇨🇳 简体中文](docs/README.zh-Hans.md) · [🇹🇼 繁體中文](docs/README.zh-TW.md) · [🇸🇦 العربية](docs/README.ar.md) · [🇮🇱 עברית](docs/README.he.md) · [🇮🇷 فارسی](docs/README.fa.md) · [🇮🇳 हिन्दी](docs/README.hi.md) · [🇵🇰 اردو](docs/README.ur.md) · [🇧🇩 বাংলা](docs/README.bn.md)
-
-## Paid Sponsors
-
-<table width="100%">
-  <tr>
-    <td align="center" width="50%">
-      <a href="https://proxyon.io/?ref=concat"><img src="https://cdn.jsdelivr.net/gh/jub0t/Concat@main/assets/proxyon_sponsor_logo.png" alt="Proxyon" width="80" /></a><br />
-      <a href="https://proxyon.io/?ref=concat"><b>Proxyon</b></a><br />
-      <sub>Pay-as-you-go proxies for developers<br />Use code <code>JUB0T</code> for 20% off</sub>
-    </td>
-    <td align="center" width="50%">
-      <a href="https://concatenate.pages.dev/#sponsor"><b>Your logo here</b></a><br />
-      <sub><a href="https://concatenate.pages.dev/#sponsor">Sponsor Concat</a> and your name, logo and link take this slot</sub>
-    </td>
-  </tr>
-</table>
 
 </div>
 
+---
 
-## About
+## ✨ Highlights & Creator Features
 
-Concat is a free, open-source video editor and a CapCut alternative for macOS, Windows, Linux and Android. It covers what people actually open CapCut for: auto-captions, text-to-speech, background removal, keyframe animation, effects and titles, multi-track cutting, 4K export. With none of the catches: no watermark, no account, no subscription, no upload.
+* ⚡ **1-Click 9:16 Shorts/Reels Fast-Cut**: Instant aspect-ratio switching between horizontal ($16:9$) and vertical ($9:16$ Shorts, Reels, TikTok) with smart centering and GPU preview.
+* 🔒 **100% Local-First & Private**: Everything runs entirely on your local hardware. No footage is ever uploaded to external servers.
+* 💬 **Local AI Auto-Captions**: In-process Whisper speech-to-text. Pick your model size and generate synchronized, styled captions right on the timeline.
+* 🗣️ **Local AI Voiceover & TTS**: Fast, offline voice generation and voice cloning powered by Kokoro and sherpa-onnx.
+* 🦀 **Native Rust Performance**: Custom multi-track timeline, low-latency audio mixing, and high-performance frame scheduling with zero garbage collection pauses.
+* 🎮 **GPU Compositor**: Smooth 60fps scrubbing with 170+ built-in WGSL shader transitions, color grading LUTs, and animated keyframes.
+* 📤 **Studio Export**: Fast hardware-accelerated encoding up to 4K 60fps in H.264, HEVC, and AV1.
+* 🤖 **Automation & Agent Ready**: Built-in CLI (`concat-cli`), Model Context Protocol (MCP), and JSON-RPC / gRPC interfaces to automate edits programmatically.
 
-Everything runs locally on a native Rust engine with a GPU compositor. Install it, drop in footage, cut. The AI models for captions, voices and cutout download once from Settings and work offline after that. Your footage never leaves your disk.
+---
 
-**Good for:** TikTok, Reels and Shorts, YouTube videos, tutorials and screen recordings, podcast clips, memes.
+## 🚀 Quick Start (Windows)
 
-**Also for machines:** a JSON-RPC, gRPC and MCP API, so scripts and AI agents can cut video with it too.
+### 1. Launch Immediately
+If you already have the repository built, simply double-click the launcher:
+```bat
+run_studio.bat
+```
+*(Or navigate to `src/` and run `cargo run -p concat`)*
 
-## Highlights
+### 2. Building from Source
+Ensure you have the required prerequisites:
+* **Rust**: 1.93.1 pinned toolchain (`rustup toolchain install 1.93.1`)
+* **C++ Compiler**: Visual Studio 2022 C++ Build Tools
+* **CMake & LLVM**: Available in system `PATH`
+* **FFmpeg 8.1 & ONNX Runtime 1.28.0**: Unpacked in `vendor/` (see [ARCHITECTURE_DECISIONS.md](ARCHITECTURE_DECISIONS.md))
 
-- 🚫 **No watermarks. No account. No paywall.** Ever.
-- 🔒 **100% local.** Nothing uploads. Works offline.
-- 💬 **Auto-captions.** Local Whisper. Pick a model size, get styled captions on the timeline.
-- 🗣️ **Text-to-speech + voice cloning.** Free local voices, or any voice from a few seconds of a recording.
-- 🧍 **Background removal.** People, objects, or paint the mask yourself.
-- 🎞️ **Keyframes.** Position, scale, rotation, opacity, volume, effect parameters. Curve editor built in.
-- ✨ **170+ effects, filters, transitions and text animations.** GPU-rendered, live in the preview.
-- ✂️ **Cut fast.** Split, trim, ripple, merge, freeze frame, speed. Magnetic timeline if you want it.
-- 🎚️ **Multi-track, multi-timeline.** Several cuts in one project. Blend modes, crop, flips.
-- 📝 **Titles.** Fonts, stroke, shadow, background plate. Presets to start from.
-- 🎙️ **One-switch voice cleanup.** Denoise, enhance voice, level the loudness. Plus chipmunk, robot, telephone and friends.
-- 📤 **Export.** H.264, HEVC, AV1. Up to 4K 60, 10-bit colour.
-- 🦀 **Native Rust engine.** GPU compositor, proxies, hardware decode. 4K scrubs smoothly.
-- 🤖 **Scriptable.** JSON-RPC, gRPC and MCP API, plus a CLI. AI agents can cut video with it.
-- 🖥️ **macOS, Windows, Linux, Android.** 25 languages. Same app, same project files.
+Run the editor in development mode:
+```pwsh
+cd src
+cargo run -p concat
+```
 
-## Download
+Run automated verification:
+```pwsh
+cd src
+cargo test --all
+```
 
-Two ways in:
+---
 
-1. **[The website](https://concatenate.pages.dev/#download)** hands you the right build for your machine. Start here.
-2. **[GitHub Releases](https://github.com/jub0t/Concat/releases)** has every build for every platform, with installers, packages and checksums. For when you want to pick.
+## 🛠️ Automation CLI
 
-Concat is in **beta**: it works, and it still has edges. [Say so](https://github.com/jub0t/Concat/issues) when you find one.
+Scorpii Studio includes a dedicated CLI binary to drive media processing headlessly:
 
-**Platforms**
+```pwsh
+# Probe media metadata
+cargo run -p concat-cli -- probe video.mp4
 
-- ✅ **Windows** · x86_64 and ARM. A setup and an `.msi`. If SmartScreen stops an unsigned build: **More info** › **Run anyway**
-- ✅ **macOS** · Intel and Apple silicon. If macOS refuses to open an unsigned build: `xattr -dr com.apple.quarantine /Applications/Concat.app`
-- ✅ **Linux** · x86_64 and ARM. `.deb`, `.rpm`, `.AppImage` and an Arch package. Also a Flatpak on **[Flatpark](https://flatpark.org/apps/app.concat.editor/)**, a community Flatpak remote that wraps the x86_64 `.deb` of each release and updates with it
-- ✅ **Android** · phones and tablets
-- ✅ **iOS / iPadOS** · iPhone and iPad, sideloaded
+# Quick render / re-encode
+cargo run -p concat-cli -- render input.mp4 output.mp4 --frames 120
 
-✅ Supported · 🚧 Work in progress · 🧪 To be tested
+# Start JSON-RPC API server
+cargo run -p concat-cli -- serve --port 7420
+```
 
-**System requirements** and the optional model sizes are on [the website](https://concatenate.pages.dev/guides/system-requirements).
+---
 
-**[Code signing policy](CODE_SIGNING.md)**: who signs the Windows builds, and what Concat sends over the network (nothing you did not ask for).
+## 🏛️ Project Governance & Architecture
 
-## How to Contribute
+* **[PRODUCT_BRIEF.md](PRODUCT_BRIEF.md)** — Product roadmap, creator use cases, and MVP milestones.
+* **[AGENTS.md](AGENTS.md)** — Core engineering directives, git invariants, and integration rules.
+* **[ARCHITECTURE_DECISIONS.md](ARCHITECTURE_DECISIONS.md)** — Architectural decision records (ADRs) and dependency topology.
+* **[UPSTREAM_PATCHES.md](UPSTREAM_PATCHES.md)** — Ledger of all local modifications to maintain clean upstream sync.
+* **[TEST_PLAN.md](TEST_PLAN.md)** — Comprehensive quality gates and media integrity validation.
 
-> [!IMPORTANT]
-> The best way to contribute is to grab a build from the [Releases](https://github.com/jub0t/Concat/releases) page and use it: find where it breaks, and say where it could be better.
->
-> Ready to write code? [CONTRIBUTING.md](./CONTRIBUTING.md) covers setup, the layout of the tree, the checks to run, and how contributions are licensed. Driving Concat from a script, a service or an agent? [The developer docs](https://concatenate.pages.dev/docs) cover the Concat API and its transports: JSON-RPC, gRPC and MCP. [This Discussion](https://github.com/jub0t/Concat/discussions/3) is where the project was announced.
-> 
-> Contributors are free to claim a `@Contributor` role in the Discord server, just ask for it.
+---
 
-## Contributors
+## ⚖️ License & Attribution
 
-<a href="https://github.com/jub0t/Concat/graphs/contributors">
-  <img alt="Contributors" src="https://contrib.rocks/image?repo=jub0t/concat">
-</a>
+Scorpii Studio builds upon the foundation of [Concat](https://github.com/jub0t/Concat) and is licensed under the **GNU Affero General Public License v3.0 or later** ([AGPL-3.0-or-later](LICENSE)) with the plugin exception ([LICENSE-EXCEPTIONS.md](LICENSE-EXCEPTIONS.md)). 
 
-## Star History
-
-<p align="center">
- <a href="https://www.star-history.com/jub0t/concat">
-  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=jub0t/concat&type=rank&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=jub0t/concat&type=rank" />
-   <img alt="Star History Rank" src="https://api.star-history.com/badge?repo=jub0t/concat&type=rank" />
-  </picture>
- </a>
-</p>
-
-<a href="https://www.star-history.com/?repos=jub0t%2Fconcat&type=date&releases=&legend=bottom-right">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=jub0t/concat&type=date&theme=dark&legend=bottom-right" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=jub0t/concat&type=date&legend=bottom-right" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=jub0t/concat&type=date&legend=bottom-right" />
- </picture>
-</a>
-
-## DMCA
-
-If you believe something in this repository, its releases, or a package or model it distributes infringes your copyright, email [jub0trd@gmail.com](mailto:jub0trd@gmail.com) with a description of the work you own, a link to where the infringing material appears here, your contact details, a statement that you believe in good faith the use is not authorised by you, your agent, or the law, and a statement, under penalty of perjury, that the notice is accurate and that you are the owner or authorised to act for the owner, signed with your physical or electronic signature; valid notices are acted on promptly, and anyone whose material is removed may send a counter-notice to the same address.
+Third-party component notices and licenses are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [LICENSE_INVENTORY.md](LICENSE_INVENTORY.md).
