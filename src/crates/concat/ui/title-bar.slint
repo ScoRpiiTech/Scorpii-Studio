@@ -148,6 +148,7 @@ export component TitleBar inherits Rectangle {
     /// A view was picked from the add-panel list.
     callback add-pane(kind: PaneKind);
     callback export-clicked();
+    callback toggle-creator-format();
 
     height: 32px;
     // The window's ground, not a panel's: the strip is the frame the panes
@@ -246,7 +247,27 @@ export component TitleBar inherits Rectangle {
             }
         }
 
-        Rectangle { horizontal-stretch: 1; }
+        HorizontalLayout {
+            alignment: center;
+            horizontal-stretch: 1;
+            spacing: 8px;
+
+            Text {
+                text: "SCORPII STUDIO";
+                font-size: 11px;
+                font-weight: Theme.weight-title;
+                color: Theme.accent;
+                letter-spacing: 1.5px;
+                vertical-alignment: center;
+            }
+
+            Text {
+                text: "• CREATE WITHOUT LIMITS.";
+                font-size: 10px;
+                color: Theme.fg-muted;
+                vertical-alignment: center;
+            }
+        }
 
         // Beside Settings, because it is the same sort of thing: neither one
         // is about the project, both are about the window you are looking at
@@ -272,6 +293,36 @@ export component TitleBar inherits Rectangle {
             HeaderIconButton {
                 glyph: Glyph.settings;
                 clicked => { root.open-settings(); }
+            }
+        }
+
+        if !root.minimal: VerticalLayout {
+            alignment: center;
+            padding-left: 4px;
+
+            creator-button := Rectangle {
+                width: creator-label.width + 20px;
+                height: 24px;
+                border-radius: Theme.r-sm;
+                background: creator-touch.has-hover ? #252836 : #181a24;
+                border-width: 1px;
+                border-color: creator-touch.has-hover ? #60a5fa : #3b82f6;
+
+                animate background { duration: 100ms; easing: cubic-bezier(0.4, 0, 0.2, 1); }
+
+                creator-label := Text {
+                    x: 10px;
+                    y: (parent.height - self.height) / 2;
+                    text: "⚡ 9:16 Shorts";
+                    color: #93c5fd;
+                    font-size: Theme.fs;
+                    font-weight: Theme.weight-title;
+                }
+
+                creator-touch := TouchArea {
+                    mouse-cursor: pointer;
+                    clicked => { root.toggle-creator-format(); }
+                }
             }
         }
 

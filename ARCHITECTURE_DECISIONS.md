@@ -62,3 +62,25 @@ Standardize the local Windows developer and CI build environment:
 - Baseline unmodified Concat builds cleanly on Windows (335+ unit tests passing).
 - Zero pollution of git history (vendor directory is ignored).
 
+---
+
+## ADR-0004: Phase 2 Thin Vertical Slice (Creator Fast-Cut Architecture)
+* **Date**: 2026-10-14
+* **Status**: Approved
+* **Owner**: Scorpii Tech Architecture Agent
+
+### Context
+Phase 2 requires a thin vertical slice that proves the end-to-end user workflow: Launch $\rightarrow$ Import Media $\rightarrow$ Automate/Reframe $\rightarrow$ Preview $\rightarrow$ Export $\rightarrow$ Reopen Project, while strictly adhering to the Tier 1 / Tier 2 integration hierarchy.
+
+### Decision
+1. **Differentiator Scope**: Implement the **Creator Fast-Cut & Social Suite**, enabling 1-click conversion between landscape (16:9) and vertical (9:16 Shorts/Reels/TikTok) formats.
+2. **Integration Tier**:
+   - Use **Tier 1 (Public Command Interface)** via `Command::SetTimelineVideo`. This ensures all changes cleanly integrate with undo/redo, auto-save (`concat.json`), live GPU monitor preview, and export rendering without patching core engine crates.
+   - Use **Tier 3 (Isolated UI Hook)** in Slint UI (`title-bar.slint` / `app.slint`) to present the Scorpii Studio brand identity (*CREATE WITHOUT LIMITS.*) and the 1-click Creator Fast-Cut quick-actions.
+3. **Upstream Patch Budget**: 0 modifications to `concat-core`, `concat-media`, `concat-render`, or `concat-export`.
+
+### Consequences
+- Clean, conflict-free rebasing against future upstream Concat releases.
+- Immediate end-to-end validation of the creator workflow.
+
+

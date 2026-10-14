@@ -10191,6 +10191,29 @@ impl Studio {
         self.request_preview();
     }
 
+    /// Scorpii Studio Creator Fast-Cut: toggles the active timeline between
+    /// 9:16 Shorts/Reels (1080 x 1920) and 16:9 Landscape (1920 x 1080).
+    pub fn toggle_creator_format(&mut self) {
+        let Some(session) = self.session.as_ref() else {
+            return;
+        };
+        let current_video = self.project().active().video;
+        let (new_w, new_h, name) = if current_video.width == 1080 && current_video.height == 1920 {
+            (1920, 1080, "16:9 Landscape")
+        } else {
+            (1080, 1920, "9:16 Shorts/Reels")
+        };
+        let video = model::VideoSettings {
+            width: new_w,
+            height: new_h,
+            ..session.video()
+        };
+        let timeline_id = self.project().active_timeline_id.clone();
+        self.apply(Command::SetTimelineVideo { timeline_id, video });
+        self.request_preview();
+        self.notify(&format!("Scorpii Studio: Reframed to {name} ({new_w}x{new_h})"), false);
+    }
+
     // ── the keyboard, and the menu's verbs ──
 
     /// A chord from the window's key table; see `Editor.shortcut`. The view

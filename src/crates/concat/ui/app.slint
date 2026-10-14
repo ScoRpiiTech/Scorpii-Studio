@@ -66,7 +66,7 @@ export {
 }
 
 export component App inherits Window {
-    title: "Concat";
+    title: "Scorpii Studio — CREATE WITHOUT LIMITS.";
     // The taskbar's and Alt-Tab's picture on Windows, and the window
     // list's on X11. A Mac takes its Dock icon from the bundle and ignores
     // this; the .exe's own, for Explorer, is embedded by build.rs.
@@ -187,6 +187,7 @@ export component App inherits Window {
     /// taken off; see platform.rs.
     callback titlebar-minimize();
     callback titlebar-close();
+    callback toggle-creator-format();
     /// Draw minimise / maximise / close on the strip. False on macOS, where
     /// the traffic lights are the window's own.
     in property <bool> own-window-buttons;
@@ -626,6 +627,7 @@ export component App inherits Window {
                 open-settings => { root.open-settings(); }
                 add-pane(kind) => { Editor.dock-add(kind); }
                 export-clicked => { root.export-clicked(); }
+                toggle-creator-format => { root.toggle-creator-format(); }
             }
 
             if root.on-start: StartScreen {
