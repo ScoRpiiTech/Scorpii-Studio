@@ -38,3 +38,27 @@ Enforce a four-tier integration hierarchy:
 
 ### Consequences
 Significantly reduces rebase friction and ensures upstream improvements can be merged with minimal conflict.
+
+---
+
+## ADR-0003: Local Build Environment & Prebuilt Dependency Strategy
+* **Date**: 2026-10-14
+* **Status**: Approved / Verified
+* **Owner**: Scorpii Tech Architecture Agent
+
+### Context
+Building Concat on Windows requires linking native C++ libraries (FFmpeg 7+, ONNX Runtime, whisper.cpp, sherpa-onnx) and generating Rust bindings via bindgen.
+
+### Decision
+Standardize the local Windows developer and CI build environment:
+1. Rust toolchain pinned at `1.93.1-x86_64-pc-windows-msvc`.
+2. CMake and LLVM (`libclang.dll`) installed to system paths.
+3. Prebuilt native shared libraries placed under `.gitignore`d `vendor/`:
+   - `vendor/ffmpeg-win64`: BtbN FFmpeg 8.1 shared build (configured via `FFMPEG_DIR`).
+   - `vendor/onnxruntime-win-x64`: Microsoft ONNX Runtime 1.28.0 shared build (configured via `ORT_LIB_LOCATION`).
+4. Avoid static linking of ONNX Runtime to maintain binary compatibility across MSVC CRT versions.
+
+### Consequences
+- Baseline unmodified Concat builds cleanly on Windows (335+ unit tests passing).
+- Zero pollution of git history (vendor directory is ignored).
+

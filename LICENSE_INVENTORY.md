@@ -24,8 +24,25 @@ This document provides a comprehensive accounting of licenses, dependencies, ext
 
 ---
 
-## 3. Dependency & Asset Ledger (To be populated during Phase 0 audit)
+## 3. Dependency & Asset Ledger (Audited in Phase 0)
 
 | Crate / Asset | Version | Stated License | Copyleft Obligations | Status / Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| *(Pending audit)* | — | — | — | Run `cargo tree` / `cargo deny` during Phase 0 |
+| `concat-core` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | std-only, verified passing |
+| `concat-project` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | Document model & undo |
+| `concat-media` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | Links FFmpeg |
+| `concat-render` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | GPU compositor, wgpu 30 |
+| `concat-effects` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | WGSL shaders & look tables |
+| `concat-text` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | Text rasterizer |
+| `concat-export` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | Media encoding & export |
+| `concat-speech` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | Whisper & Sherpa-onnx |
+| `concat-api` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | JSON-RPC API dispatcher |
+| `concat-server` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | Socket / TCP / gRPC server |
+| `concat-cli` | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | CLI driver (verified working) |
+| `concat` (UI) | `0.2.7` | AGPL-3.0-or-later | Strong copyleft | Slint 1.18.1 with Skia |
+| **FFmpeg** | `8.1` (BtbN) | GPLv3 (shared) | Copyleft on redistribution | Prebuilt DLLs under vendor |
+| **ONNX Runtime** | `1.28.0` | MIT | Permissive | Microsoft prebuilt shared DLLs |
+| **whisper.cpp** | Embedded | MIT | Permissive | Built via CMake in whisper-rs-sys |
+| **sherpa-onnx** | `1.13.7` | Apache 2.0 | Permissive | Kokoro TTS backend |
+| **Slint** | `1.18.1` | GPLv3 / Royalty-free | Strong copyleft (GPL) | Skia backend |
+
