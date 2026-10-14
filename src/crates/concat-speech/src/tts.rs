@@ -874,7 +874,10 @@ impl Speech {
         // and the file written here. Sherpa's families go on below.
         // A named voice's recording lives in the Pocket bundle, whichever
         // model reads it; a chosen recording needs no bundle at all.
-        let recordings = if is_clone(request.voice) {
+        // Kokoro reads built-in weights directly and does not need Pocket recordings.
+        let recordings = if family == Family::Kokoro {
+            PathBuf::new()
+        } else if is_clone(request.voice) {
             dir.clone()
         } else {
             recordings_dir(dirs)?
