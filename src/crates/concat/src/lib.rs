@@ -1652,6 +1652,11 @@ fn start(project: Option<std::path::PathBuf>, smoke: bool) -> Result<(), slint::
     app.on_speech_cancel(on_window!(|state| {
         state.handle(Msg::Speech(SpeechMsg::Cancel));
     }));
+    app.on_speech_open_settings(on_window!(|state| {
+        state.handle(Msg::Speech(SpeechMsg::Close));
+        state.handle(Msg::Settings(SettingsMsg::Open));
+        state.handle(Msg::Settings(SettingsMsg::PageChanged(3)));
+    }));
 
     // ── the title-bar menus ──
     app.on_menu_opened(on_window!(|state, index: i32| {

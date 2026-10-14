@@ -247,6 +247,7 @@ export component SpeechDialog inherits Modal {
     pure callback insert-tag(text: string, tag: string, at: int) -> string;
     callback begin();
     callback cancel();
+    callback open-settings();
 
     open: root.data.open;
     title: "ScoRpii Voice Studio";
@@ -420,6 +421,46 @@ export component SpeechDialog inherits Modal {
             }
         }
 
+        if !root.running && root.models.length == 0: Rectangle {
+            background: #2a1622;
+            border-radius: Theme.r;
+            border-width: 1px;
+            border-color: #831843;
+
+            HorizontalLayout {
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                spacing: 12px;
+                alignment: center;
+
+                VerticalLayout {
+                    spacing: 2px;
+                    horizontal-stretch: 1;
+
+                    Text {
+                        text: "No offline voice models installed yet";
+                        color: #fbcfe8;
+                        font-weight: Theme.weight-title;
+                        font-size: Theme.fs;
+                    }
+
+                    Text {
+                        text: "Click Download on 'Kokoro (compact)' in Settings to enable offline speech.";
+                        color: #f472b6;
+                        font-size: Theme.fs-sm;
+                    }
+                }
+
+                Button {
+                    label: "Download in Settings";
+                    glyph: Glyph.import;
+                    clicked => { root.open-settings(); }
+                }
+            }
+        }
+
         if !root.running: DialogSection {
             title: I18n.t("speech.voice");
 
@@ -427,13 +468,24 @@ export component SpeechDialog inherits Modal {
             // of the dials below are shown.
             DialogRow {
                 label: I18n.t("common.model");
-                Select {
-                    options: root.models;
-                    details: root.model-details;
-                    current: root.data.model;
-                    placeholder: I18n.t("common.noneInstalled");
-                    enabled: root.models.length > 0;
-                    changed(index) => { root.model-changed(index); }
+                HorizontalLayout {
+                    spacing: 8px;
+
+                    Select {
+                        horizontal-stretch: 1;
+                        options: root.models;
+                        details: root.model-details;
+                        current: root.data.model;
+                        placeholder: I18n.t("common.noneInstalled");
+                        enabled: root.models.length > 0;
+                        changed(index) => { root.model-changed(index); }
+                    }
+
+                    if root.models.length == 0: Button {
+                        label: "Download Models…";
+                        glyph: Glyph.import;
+                        clicked => { root.open-settings(); }
+                    }
                 }
             }
 
