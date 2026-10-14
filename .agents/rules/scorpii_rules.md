@@ -11,6 +11,6 @@
   2. Isolated modules/crates + documented adapters
   3. Small host/UI hooks
   4. Core engine edits (strictly gated, requires entry in UPSTREAM_PATCHES.md and human approval).
-- **Git Discipline**: Never force push. Upstream baseline is kept clean on `origin/main`. Product work on `product/integration` and `feat/*`.
+- **Git Discipline**: Never force push. Clean upstream baseline tracked on `upstream/main`. Default GitHub branch `main` showcases Scorpii Studio. Development on `product/integration` and `feat/*`.
 - **Quality**: Compiling != done. Verify media import, seek, playback, export, and project save/load.
 - **Reporting**: Always conclude tasks with the structured Task Report format defined in `AGENTS.md`.

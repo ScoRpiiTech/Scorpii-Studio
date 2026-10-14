@@ -38,8 +38,8 @@
 ## 2. Git & Upstream Synchronization Rules
 
 1. **Branch Strategy**:
-   - `upstream/main`: Official upstream repository remote tracking branch.
-   - `origin/main`: Clean mirror of the approved pinned upstream commit. **No Scorpii-specific commits here.**
+   - `upstream/main`: Official upstream Concat repository remote tracking branch (untouched baseline).
+   - `origin/main` / `main`: Primary default branch for Scorpii Studio on GitHub containing hardened releases and brand presentation.
    - `product/integration`: Combined branch with pinned upstream baseline + approved Scorpii Studio patches.
    - `feat/<name>`: Focused, isolated feature branches branched from `product/integration`.
    - `release/<version>`: Hardened release candidates.
