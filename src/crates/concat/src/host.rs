@@ -57,6 +57,8 @@ pub struct Host {
     pub server: Option<concat_server::Server>,
     /// Which project folders are open, here or over the socket.
     pub open_projects: concat_api::OpenProjects,
+    /// ScoRpii Voice Studio backend bridge and sidecar lifecycle manager.
+    pub voicestudio: Arc<concat_host::VoiceStudioManager>,
 }
 
 impl Host {
@@ -82,6 +84,7 @@ impl Host {
             exporter: Exporter::new(),
             transcriber: Arc::new(Transcriber::new()),
             speech: Arc::new(Speech::new()),
+            voicestudio: Arc::new(concat_host::VoiceStudioManager::default()),
             server: None,
             open_projects: concat_api::OpenProjects::default(),
         })

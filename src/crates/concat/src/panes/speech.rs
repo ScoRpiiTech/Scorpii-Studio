@@ -377,11 +377,41 @@ impl SpeechPane {
         };
         let dirs = studio.host.dirs.clone();
         let speech = Arc::clone(&studio.host.speech);
+        let voicestudio = Arc::clone(&studio.host.voicestudio);
         self.running = true;
         self.message.clear();
         let epoch = crate::host::project_epoch();
         spawn_in_project(
             move || {
+                // If ScoRpii Voice Studio sidecar/service is healthy, generate high-fidelity speech
+                if voicestudio.is_healthy() {
+                    on_ui_in_project(epoch, move |studio, _, _| {
+                        studio.handle(Msg::Speech(SpeechMsg::Progress(JobStage::Working {
+                            done: 0.5,
+                            next: 1.0,
+                        })));
+                    });
+                    let root = std::path::Path::new(&request.project);
+                    let out_dir = root.join("audio");
+                    let _ = std::fs::create_dir_all(&out_dir);
+                    let stamp = std::time::SystemTime::now()
+                        .duration_since(std::time::UNIX_EPOCH)
+                        .map(|elapsed| elapsed.as_millis())
+                        .unwrap_or(0);
+                    let dest_path = out_dir.join(format!("speech-voicestudio-{stamp}.wav"));
+                    let vs_req = concat_host::VoiceStudioGenerateRequest {
+                        text: request.text.clone(),
+                        speed: request.speed,
+                        ..Default::default()
+                    };
+                    if let Ok(written) = voicestudio.generate(&vs_req, &dest_path) {
+                        let written_str = written.to_string_lossy().to_string();
+                        if let Ok(summary) = media::probe(&written_str) {
+                            return Ok::<_, String>(summary);
+                        }
+                    }
+                }
+
                 let spoken = speech.speak(&dirs, &request, move |stage| {
                     on_ui_in_project(epoch, move |studio, _, _| {
                         studio.handle(Msg::Speech(SpeechMsg::Progress(stage)));
