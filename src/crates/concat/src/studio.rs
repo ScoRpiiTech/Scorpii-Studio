@@ -10214,6 +10214,11 @@ impl Studio {
         self.notify(&format!("Scorpii Studio: Reframed to {name} ({new_w}x{new_h})"), false);
     }
 
+    /// Opens the ScoRpii Voice Studio modal dialog.
+    pub fn open_voice_studio(&mut self) {
+        self.handle(crate::panes::Msg::Speech(crate::panes::speech::SpeechMsg::Open));
+    }
+
     // ── the keyboard, and the menu's verbs ──
 
     /// A chord from the window's key table; see `Editor.shortcut`. The view

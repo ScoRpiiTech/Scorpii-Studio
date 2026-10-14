@@ -149,6 +149,7 @@ export component TitleBar inherits Rectangle {
     callback add-pane(kind: PaneKind);
     callback export-clicked();
     callback toggle-creator-format();
+    callback open-voice-studio();
 
     height: 32px;
     // The window's ground, not a panel's: the strip is the frame the panes
@@ -322,6 +323,36 @@ export component TitleBar inherits Rectangle {
                 creator-touch := TouchArea {
                     mouse-cursor: pointer;
                     clicked => { root.toggle-creator-format(); }
+                }
+            }
+        }
+
+        if !root.minimal: VerticalLayout {
+            alignment: center;
+            padding-left: 4px;
+
+            voice-button := Rectangle {
+                width: voice-label.width + 20px;
+                height: 24px;
+                border-radius: Theme.r-sm;
+                background: voice-touch.has-hover ? #2e1a38 : #1f1226;
+                border-width: 1px;
+                border-color: voice-touch.has-hover ? #c084fc : #9333ea;
+
+                animate background { duration: 100ms; easing: cubic-bezier(0.4, 0, 0.2, 1); }
+
+                voice-label := Text {
+                    x: 10px;
+                    y: (parent.height - self.height) / 2;
+                    text: "🎙️ ScoRpii Voice Studio";
+                    color: #e9d5ff;
+                    font-size: Theme.fs;
+                    font-weight: Theme.weight-title;
+                }
+
+                voice-touch := TouchArea {
+                    mouse-cursor: pointer;
+                    clicked => { root.open-voice-studio(); }
                 }
             }
         }

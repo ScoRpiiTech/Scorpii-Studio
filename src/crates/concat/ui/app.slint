@@ -188,6 +188,7 @@ export component App inherits Window {
     callback titlebar-minimize();
     callback titlebar-close();
     callback toggle-creator-format();
+    callback open-voice-studio();
     /// Draw minimise / maximise / close on the strip. False on macOS, where
     /// the traffic lights are the window's own.
     in property <bool> own-window-buttons;
@@ -628,6 +629,7 @@ export component App inherits Window {
                 add-pane(kind) => { Editor.dock-add(kind); }
                 export-clicked => { root.export-clicked(); }
                 toggle-creator-format => { root.toggle-creator-format(); }
+                open-voice-studio => { root.open-voice-studio(); }
             }
 
             if root.on-start: StartScreen {

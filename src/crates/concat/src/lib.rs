@@ -1360,6 +1360,9 @@ fn start(project: Option<std::path::PathBuf>, smoke: bool) -> Result<(), slint::
     app.on_toggle_creator_format(on_window!(|state| {
         state.toggle_creator_format();
     }));
+    app.on_open_voice_studio(on_window!(|state| {
+        state.open_voice_studio();
+    }));
     app.on_export_clicked(on_window!(|state| {
         state.handle(Msg::Export(ExportMsg::Open));
     }));
