@@ -80,7 +80,7 @@ pub fn system_facts() -> Vec<(String, String)> {
     vec![
         (
             t("sysinfo.application"),
-            format!("Concat {}", env!("CARGO_PKG_VERSION")),
+            format!("Scorpii Studio {}", env!("CARGO_PKG_VERSION")),
         ),
         (
             t("sysinfo.build"),
@@ -100,7 +100,7 @@ pub fn system_facts() -> Vec<(String, String)> {
         ),
         (
             t("sysinfo.engine"),
-            format!("concat-engine · FFmpeg {}", concat_media::linked_version()),
+            format!("scorpii-engine · FFmpeg {}", concat_media::linked_version()),
         ),
         (t("sysinfo.operatingSystem"), os_description()),
         (

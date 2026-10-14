@@ -64,3 +64,12 @@ desktop.ini
 /AGENTS.md
 /extracted_guide.md
 /*.docx
+
+# Internal reference, architecture and planning documents
+/ARCHITECTURE_DECISIONS.md
+/PRODUCT_BRIEF.md
+/TEST_PLAN.md
+/UPSTREAM_PATCHES.md
+/LICENSE_INVENTORY.md
+/RELEASE_CHECKLIST.md
+

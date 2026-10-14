@@ -8,7 +8,7 @@
 [![Version](https://img.shields.io/badge/Version-0.2.7-00c8ff?style=flat-square&logo=semver&logoColor=white)](https://github.com/ScoRpiiTech/Scorpii-Studio)
 [![Rust](https://img.shields.io/badge/Rust-1.93.1-orange?style=flat-square&logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![GPU](https://img.shields.io/badge/GPU-DirectX12%20%7C%20Vulkan%20%7C%20Metal-blueviolet?style=flat-square)](https://wgpu.rs/)
-[![Local First](https://img.shields.io/badge/Privacy-100%25%20Local--First-00E599?style=flat-square&logo=shield&logoColor=white)](PRODUCT_BRIEF.md)
+[![Local First](https://img.shields.io/badge/Privacy-100%25%20Local--First-00E599?style=flat-square&logo=shield&logoColor=white)](https://github.com/ScoRpiiTech/Scorpii-Studio)
 [![License](https://img.shields.io/badge/License-AGPL%20v3-0568FD?style=flat-square&logo=gnu&logoColor=white)](LICENSE)
 
 <p align="center">
@@ -47,7 +47,7 @@ Ensure you have the required prerequisites:
 * **Rust**: 1.93.1 pinned toolchain (`rustup toolchain install 1.93.1`)
 * **C++ Compiler**: Visual Studio 2022 C++ Build Tools
 * **CMake & LLVM**: Available in system `PATH`
-* **FFmpeg 8.1 & ONNX Runtime 1.28.0**: Unpacked in `vendor/` (see [ARCHITECTURE_DECISIONS.md](ARCHITECTURE_DECISIONS.md))
+* **FFmpeg 8.1 & ONNX Runtime 1.28.0**: Unpacked in `vendor/`
 
 Run the editor in development mode:
 ```pwsh
@@ -80,17 +80,8 @@ cargo run -p concat-cli -- serve --port 7420
 
 ---
 
-## 🏛️ Project Governance & Architecture
-
-* **[PRODUCT_BRIEF.md](PRODUCT_BRIEF.md)** — Product roadmap, creator use cases, and MVP milestones.
-* **[ARCHITECTURE_DECISIONS.md](ARCHITECTURE_DECISIONS.md)** — Architectural decision records (ADRs) and dependency topology.
-* **[UPSTREAM_PATCHES.md](UPSTREAM_PATCHES.md)** — Ledger of all local modifications to maintain clean upstream sync.
-* **[TEST_PLAN.md](TEST_PLAN.md)** — Comprehensive quality gates and media integrity validation.
-
----
-
 ## ⚖️ License & Attribution
 
 Scorpii Studio builds upon the foundation of [Concat](https://github.com/jub0t/Concat) and is licensed under the **GNU Affero General Public License v3.0 or later** ([AGPL-3.0-or-later](LICENSE)) with the plugin exception ([LICENSE-EXCEPTIONS.md](LICENSE-EXCEPTIONS.md)). 
 
-Third-party component notices and licenses are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [LICENSE_INVENTORY.md](LICENSE_INVENTORY.md).
+Third-party component notices and licenses are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
